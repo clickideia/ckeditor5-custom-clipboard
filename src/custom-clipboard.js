@@ -3,12 +3,15 @@ import plainTextToHtml from '@ckeditor/ckeditor5-clipboard/src/utils/plaintextto
 import normalizeClipboardHtml from '@ckeditor/ckeditor5-clipboard/src/utils/normalizeclipboarddata';
 
 class CustomClipboard extends Clipboard {
+	pluginName() {
+		return 'CustomClipboard';
+	}
+
 	init() {
 		// Executes Clipboard init method
 		super.init();
 
 		const editor = this.editor;
-		const modelDocument = editor.model.document;
 		const view = editor.editing.view;
 		const viewDocument = view.document;
 
@@ -24,7 +27,7 @@ class CustomClipboard extends Clipboard {
 		}, { priority: 'highest' } );
 
 		// New listener to paste, sanitize clipboard data with methods on options
-		this.listenTo( viewDocument, 'clipboardInput', ( evt, data ) => {
+		this.listenTo( viewDocument, 'clipboardInput', ( _evt, data ) => {
 			const dataTransfer = data.dataTransfer;
 			const options = this.editor.config.get( 'customClipboard.options' ) || {};
 
