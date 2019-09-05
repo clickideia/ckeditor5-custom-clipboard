@@ -1,2 +1,5 @@
 # ckeditor5-custom-clipboard
-Custom clipboard plugin for CKEditor 5
+
+=========================================
+
+[![npm package](https://img.shields.io/npm/v/ckeditor5-custom-clipboard)](https://www.npmjs.com/package/ckeditor5-custom-clipboard)
