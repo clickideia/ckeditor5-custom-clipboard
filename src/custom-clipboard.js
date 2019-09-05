@@ -14,7 +14,7 @@ class CustomClipboard extends Clipboard {
 		const editor = this.editor;
 		const view = editor.editing.view;
 		const viewDocument = view.document;
-
+		console.log("WORKING?");
 		// Remove default document listener to replace it
 		this.stopListening( viewDocument, 'clipboardInput' );
 
@@ -53,7 +53,7 @@ class CustomClipboard extends Clipboard {
 			this.fire( 'inputTransformation', { content, dataTransfer } );
 
 			view.scrollToTheSelection();
-		}, { priority: 'low' } );
+		}, { priority: 'high' } );
 	}
 }
 
