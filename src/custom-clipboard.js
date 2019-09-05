@@ -1,4 +1,4 @@
-import Clipboard from '@ckeditor/ckeditor5-clipboard';
+import Clipboard from '@ckeditor/ckeditor5-clipboard/src/clipboard';
 import plainTextToHtml from '@ckeditor/ckeditor5-clipboard/src/utils/plaintexttohtml';
 import normalizeClipboardHtml from '@ckeditor/ckeditor5-clipboard/src/utils/normalizeclipboarddata';
 
