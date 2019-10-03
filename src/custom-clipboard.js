@@ -4,7 +4,7 @@ import normalizeClipboardHtml from '@ckeditor/ckeditor5-clipboard/src/utils/norm
 
 class CustomClipboard extends Clipboard {
 	static get pluginName() {
-		return 'Clipboard';
+		return 'CustomClipboard';
 	}
 
 	init() {
