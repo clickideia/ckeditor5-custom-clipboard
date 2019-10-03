@@ -3,8 +3,8 @@ import plainTextToHtml from '@ckeditor/ckeditor5-clipboard/src/utils/plaintextto
 import normalizeClipboardHtml from '@ckeditor/ckeditor5-clipboard/src/utils/normalizeclipboarddata';
 
 class CustomClipboard extends Clipboard {
-	pluginName() {
-		return 'CustomClipboard';
+	static get pluginName() {
+		return 'Clipboard';
 	}
 
 	init() {
@@ -14,7 +14,7 @@ class CustomClipboard extends Clipboard {
 		const editor = this.editor;
 		const view = editor.editing.view;
 		const viewDocument = view.document;
-		console.log("WORKING?");
+
 		// Remove default document listener to replace it
 		this.stopListening( viewDocument, 'clipboardInput' );
 
